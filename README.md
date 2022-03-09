@@ -6,7 +6,7 @@ https://docs.djangoproject.com/en/4.0/ref/models/expressions/#window-functions
 
 # join 관련 내용 조지기
 
-# 계층형 쿼리
+# self join ->  계층형 쿼리
 
 너무 신기 
 ```sql
