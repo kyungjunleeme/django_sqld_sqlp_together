@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/4.0/ref/models/expressions/#window-functions
 
 너무 신기 
 ```sql
-SELECT  LPAD(' ',2*(LEVEL-1)) || tree_name, tree_lvl, tree_h_name,level
+SELECT LPAD(' ',2*(LEVEL-1)) || tree_name, tree_lvl, tree_h_name, level, SYS_CONNECT_BY_PATH(tree_name, '-') AS PATH
 FROM tree
 START WITH tree_h_name is null
 CONNECT BY PRIOR tree_name = tree_h_name    
@@ -18,8 +18,7 @@ ORDER SIBLINGS by tree_name
 ;
 ```
 
-
-![image](https://user-images.githubusercontent.com/45473846/157410030-da590a29-7b74-4077-86ea-0ac73e8773dd.png)
+![image](https://user-images.githubusercontent.com/45473846/157413036-0dfb2b48-c9bf-41fc-8932-f17069463447.png)
 
 
 
