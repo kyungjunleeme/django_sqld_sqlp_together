@@ -8,6 +8,10 @@ https://docs.djangoproject.com/en/4.0/ref/models/expressions/#window-functions
 
 # self join ->  계층형 쿼리
 
+
+https://medium.com/29cm/%EC%8B%A0%EC%9E%85-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%B2%AB-%ED%99%80%EB%A1%9C%EC%84%9C%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2303ff8dfe30
+
+
 너무 신기 
 ```sql
 SELECT LPAD(' ',2*(LEVEL-1)) || tree_name, tree_lvl, tree_h_name, level, SYS_CONNECT_BY_PATH(tree_name, '-') AS PATH
